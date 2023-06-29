@@ -14,6 +14,18 @@ export function formatDate(input: string | number): string {
   })
 }
 
+export function getTime(time: any) : string {
+  const milliseconds = time * 1000;
+  const date = new Date(milliseconds);
+  return date.toLocaleTimeString();
+}
+
+export function getDate(time : any) :string {
+  const milliseconds = time * 1000;
+  const date = new Date(milliseconds);
+  return date.toLocaleDateString();
+}
+
 export function absoluteUrl(path: string) {
   return `${process.env.NEXT_PUBLIC_APP_URL}${path}`
 }
