@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
-import { RocketIcon, Trash2 } from "lucide-react";
+import { Trash2 } from "lucide-react";
 import db from "../config/firebase";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 
