@@ -8,6 +8,7 @@ import Navbar from "./components/navbar";
 import { SignedIn, useUser } from "@clerk/clerk-react";
 import { ListPlus } from "lucide-react";
 import { useToast } from "./hooks/use-toast";
+import UserNotFound from "./components/layout/user-not-found";
 
 const App = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
@@ -87,11 +88,7 @@ const AppWrapper = () => {
   const { isLoaded, isSignedIn } = useUser();
 
   if (!isLoaded || !isSignedIn) {
-    return (
-      <div>
-        <Navbar />
-      </div>
-    );
+    return <UserNotFound />;
   }
 
   return <App />;
